@@ -1,0 +1,52 @@
+group 'net.locortes'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'lib'
+    }
+}
+
+dependencies {
+    //Groovy dependencies
+    compile 'org.codehaus.groovy:groovy-all:2.3.11'
+
+    //Local chemistry apache local version as it is yet not uploaded to Maven Central
+    compile name: 'asm-3.3.1'
+    compile name: 'chemistry-opencmis-client-api-1.0.0'
+    compile name: 'chemistry-opencmis-client-bindings-1.0.0'
+    compile name: 'chemistry-opencmis-client-impl-1.0.0'
+    compile name: 'chemistry-opencmis-commons-api-1.0.0'
+    compile name: 'chemistry-opencmis-commons-impl-1.0.0'
+    compile name: 'chemistry-opencmis-commons-impl-1.0.0'
+    compile name: 'cxf-core-3.0.10'
+    compile name: 'cxf-rt-bindings-soap-3.0.10'
+    compile name: 'cxf-rt-bindings-xml-3.0.10'
+    compile name: 'cxf-rt-databinding-jaxb-3.0.10'
+    compile name: 'cxf-rt-frontend-jaxws-3.0.10'
+    compile name: 'cxf-rt-frontend-simple-3.0.10'
+    compile name: 'cxf-rt-transports-http-3.0.10'
+    compile name: 'cxf-rt-ws-addr-3.0.10'
+    compile name: 'cxf-rt-wsdl-3.0.10'
+    compile name: 'cxf-rt-ws-policy-3.0.10'
+    compile name: 'jaxb-core-2.2.11'
+    compile name: 'jaxb-impl-2.2.11'
+    compile name: 'neethi-3.0.3'
+    compile name: 'slf4j-api-1.7.21'
+    compile name: 'stax2-api-3.1.4'
+    compile name: 'woodstox-core-asl-4.4.1'
+    compile name: 'wsdl4j-1.6.3'
+    compile name: 'xml-resolver-1.2'
+    compile name: 'xmlschema-core-2.2.1'
+
+    //Maven Dependencies
+    //compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.21'
+    compile group: 'org.slf4j', name: 'slf4j-nop', version: '1.7.21'
+    compile group: 'log4j', name: 'log4j', version: '1.2.17'
+}
